@@ -90,7 +90,7 @@ st.markdown("<div class='subtext'>Clean AI-based mental health assessment using 
 # -------------------------
 # LOAD DATA
 # -------------------------
-data = pd.read_csv("../data/dataset.csv")
+data = pd.read_csv("data/dataset.csv")
 data.columns = data.columns.str.strip().str.lower()
 target = "depression"
 
@@ -113,7 +113,7 @@ model_name = st.sidebar.selectbox(
     ["RandomForest", "LogisticRegression", "SVM", "HGB"]
 )
 
-model = pickle.load(open(f"../models/{model_name}.pkl", "rb"))
+model = pickle.load(open(f"models/{model_name}.pkl", "rb"))
 
 # -------------------------
 # DASHBOARD
